@@ -5,8 +5,8 @@ services:
     ports:
       - '80:8080'
     environment:
-      - SERVICE_URL_INFISICAL_8080
-      - 'SITE_URL=${SERVICE_URL_INFISICAL_8080}'
+      - SERVICE_URL_INFISICAL
+      - 'SITE_URL=${SERVICE_URL_INFISICAL}'
       - 'NODE_ENV=${NODE_ENV:-production}'
       - 'ENCRYPTION_KEY=${SERVICE_ENCRYPTIONKEY}'
       - 'AUTH_SECRET=${SERVICE_REALBASE64_64_AUTHSECRET}'
