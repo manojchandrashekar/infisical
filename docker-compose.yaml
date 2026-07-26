@@ -16,9 +16,8 @@ services:
       - 'SMTP_FROM_NAME=${SERVICE_SMTP_FROM_NAME}'
       - 'DB_CONNECTION_URI=postgres://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_POSTGRES}@${SERVICE_NETBIRD_IP}:5432/${SERVICE_POSTGRES_DB}'
       - 'REDIS_URL=redis://${SERVICE_USER_REDIS}:${SERVICE_PASSWORD_REDIS}@${SERVICE_NETBIRD_IP}:6379'
-      - 'HOST=${SERVICE_FQDN_INFISICAL}'
       - TELEMETRY_ENABLED=false
     healthcheck:
       test:
         - CMD-SHELL
-        - 'wget --no-verbose --tries=1 --spider http://localhost:8080/api/status || exit 1'
+        - 'wget --no-verbose --tries=1 --spider http://127.0.0.1:8080/api/status || exit 1'
