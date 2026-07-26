@@ -4,7 +4,7 @@ services:
     image: 'infisical/infisical:v0.162.13'
     environment:
       - SERVICE_URL_INFISICAL_8080
-      - 'SITE_URL=${SERVICE_URL_INFISICAL_8080}'
+      - 'SITE_URL=${SERVICE_URL_INFISICAL}'
       - 'NODE_ENV=${NODE_ENV:-production}'
       - 'ENCRYPTION_KEY=${SERVICE_ENCRYPTIONKEY}'
       - 'AUTH_SECRET=${SERVICE_REALBASE64_64_AUTHSECRET}'
